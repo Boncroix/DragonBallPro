@@ -27,9 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             .sink(receiveValue: { estado in
                 switch estado {
                 case .notValidate, .none:
-                    //ver el login
                     DispatchQueue.main.async {
-                        print("vamos pal login")
                         nav = UINavigationController(rootViewController: LoginViewController(appState: self.appState))
                         self.window?.rootViewController = nav
                         self.window?.makeKeyAndVisible()

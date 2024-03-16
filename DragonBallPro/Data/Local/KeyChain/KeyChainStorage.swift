@@ -24,7 +24,12 @@ final class SecureDataKeychain: SecureDataProtocol {
     }
     
     func getToken() -> String? {
-        keychain.get(keytoken)
+        if let token = keychain.get(keytoken) {
+            return token
+        } else {
+            return ""
+        }
+        
     }
     
     func deleteToken() {
@@ -42,7 +47,11 @@ final class SecureDataUserDefaults: SecureDataProtocol {
     }
     
     func getToken() -> String? {
-        userDefaults.value(forKey: keytoken) as? String
+        if let token = userDefaults.value(forKey: keytoken) as? String{
+            return token
+        } else {
+            return ""
+        }
     }
     
     func deleteToken() {

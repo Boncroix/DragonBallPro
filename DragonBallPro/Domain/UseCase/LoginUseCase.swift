@@ -44,7 +44,7 @@ final class LoginUseCase: LoginUseCaseProtocol {
     }
     
     func validateToken() async -> Bool {
-        if secureData.getToken() != nil {
+        if secureData.getToken() != "" {
             return true
         } else {
             return false
