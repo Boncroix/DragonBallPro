@@ -1,0 +1,53 @@
+//
+//  KeyChainStorage.swift
+//  DragonBallPro
+//
+//  Created by Jose Bueno Cruz on 16/3/24.
+//
+
+import Foundation
+import KeychainSwift
+
+protocol SecureDataProtocol {
+    func set(token: String)
+    func getToken() -> String?
+    func deleteToken()
+}
+
+final class SecureDataKeychain: SecureDataProtocol {
+    
+    private let keychain = KeychainSwift()
+    private let keytoken = ConstantsApp.CONST_TOKEN_ID_KEYCHAIN
+    
+    func set(token: String) {
+        keychain.set(token, forKey: keytoken)
+    }
+    
+    func getToken() -> String? {
+        keychain.get(keytoken)
+    }
+    
+    func deleteToken() {
+        keychain.delete(keytoken)
+    }
+}
+
+final class SecureDataUserDefaults: SecureDataProtocol {
+    
+    private let userDefaults = UserDefaults.standard
+    private let keytoken = ConstantsApp.CONST_TOKEN_ID_KEYCHAIN
+    
+    func set(token: String) {
+        userDefaults.setValue(token, forKey: keytoken)
+    }
+    
+    func getToken() -> String? {
+        userDefaults.value(forKey: keytoken) as? String
+    }
+    
+    func deleteToken() {
+        userDefaults.removeObject(forKey: keytoken)
+    }
+    
+    
+}

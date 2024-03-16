@@ -6,14 +6,42 @@
 //
 
 import UIKit
+import Combine
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
+    
     var window: UIWindow?
-
-
+    var appState: AppState = AppState(loginUseCase: LoginUseCase())
+    var cancelable: AnyCancellable?
+    
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let scene = (scene as? UIWindowScene) else { return }
+        self.window = UIWindow(windowScene: scene)
+        
+        appState.validateControlLogin()
+        
+        var nav: UINavigationController?
+        
+        self.cancelable = appState.$statusLogin
+            .sink(receiveValue: { estado in
+                switch estado {
+                case .notValidate, .none:
+                    //ver el login
+                    DispatchQueue.main.async {
+                        print("vamos pal login")
+                        nav = UINavigationController(rootViewController: LoginViewController(appState: self.appState))
+                        self.window?.rootViewController = nav
+                        self.window?.makeKeyAndVisible()
+                    }
+                case .success:
+                    //la home
+                    print("vamos pal home")
+                case .error:
+                    //error
+                    print("vamos pal error")
+                }
+            })
     }
 }
 

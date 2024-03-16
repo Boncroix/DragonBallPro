@@ -10,9 +10,9 @@ import Foundation
 struct  NetworkRequest {
     private let host = URL(string: ConstantsApp.CONST_API_URL)
     
-    ///Pedido para el Login
-    func requestForLogin(endPoint: HTTPEndPoints, user: String, password: String) async throws -> URLRequest {
-        guard let url = host?.appendingPathComponent(endPoint.endpoint()) else {
+    //MARK: - Request For Login
+    func requestForLogin(user: String, password: String) async throws -> URLRequest {
+        guard let url = host?.appendingPathComponent(HTTPEndPoints.login.rawValue) else {
             throw NetworkError.malformedURL
         }
         
@@ -28,8 +28,8 @@ struct  NetworkRequest {
         return request
     }
 
-    ///Pedido para el resto de llamadas
-    func requestRest(endPoint: HTTPEndPoints, token: UUID, params: [String: Any]) async throws -> URLRequest {
+    //MARK: - Request For Rest
+    func requestForRest(endPoint: HTTPEndPoints, token: UUID, params: [String: Any]) async throws -> URLRequest {
         guard let url = host?.appendingPathComponent(endPoint.endpoint()) else {
             throw NetworkError.malformedURL
         }
