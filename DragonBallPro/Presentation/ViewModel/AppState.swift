@@ -8,33 +8,56 @@
 import Foundation
 import Combine
 
-enum LoginStatus {
-    case none
-    case success
-    case error
-    case notValidate
-}
-
 final class AppState {
     
     @Published var statusLogin: LoginStatus = .none
-    
     private var loginUseCase: LoginUseCaseProtocol
     
+    //MARK: - Inits
     init(loginUseCase: LoginUseCaseProtocol = LoginUseCase()) {
         self.loginUseCase = loginUseCase
     }
     
-    func loginApp(user: String, password: String) throws {
+    //MARK: - OnLoginButton
+    func onLoginButton(email: String?, password: String?) {
+        self.statusLogin = .loading(true)
+        
+        guard let email = email, isValid(email: email) else {
+            self.statusLogin = .showErrorEmail("Error en el Email")
+            return
+        }
+        guard let password = password, isValid(password: password) else {
+            self.statusLogin = .showErrorPassword("Contraseña debe tener 4 o más caracteres")
+            return
+        }
+        loginApp(user: email, password: password)
+    }
+    
+    //MARK: - CheckEmail
+    private func isValid(email: String) -> Bool {
+        email.isEmpty == false && email.contains("@")
+    }
+    
+    //MARK: - CheckPassword
+    private func isValid(password: String) -> Bool {
+        password.isEmpty == false && password.count >= 4
+    }
+    
+    //MARK: - LoginApp
+    private func loginApp(user: String, password: String) {
         Task {
-            if ( try await loginUseCase.loginApp(user: user, password: password)) {
-                self.statusLogin = .success
-            } else {
-                self.statusLogin = .error
+            do {
+                if ( try await loginUseCase.loginApp(user: user, password: password)) {
+                    self.statusLogin = .success
+                }
+            } catch {
+                let errorMessage = errorMessage(for: error)
+                self.statusLogin = .errorNetwork(errorMessage)
             }
         }
     }
     
+    //MARK: - ValidateLogin
     func validateControlLogin() {
         Task {
             if (await loginUseCase.validateToken()) {
@@ -45,6 +68,7 @@ final class AppState {
         }
     }
     
+    //MARK: - CloseSessionUser
     func closeSessionUser() {
         Task {
             await loginUseCase.logout()
@@ -52,3 +76,6 @@ final class AppState {
         }
     }
 }
+
+
+

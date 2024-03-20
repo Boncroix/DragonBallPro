@@ -11,7 +11,7 @@ struct HTTPAuthentication {
     static func basicCredentials(_ credentials: String) -> String {
             return "Basic \(credentials)"
         }
-    static func bearerToken(_ token: UUID) -> String {
+    static func bearerToken(_ token: String) -> String {
             return "Bearer \(token)"
         }
 }

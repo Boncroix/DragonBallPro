@@ -7,29 +7,27 @@
 
 import Foundation
 
-
+//MARK: - Protocol
 protocol NetworkLoginProtocol {
     func loginApp(user: String, password: String) async throws -> String
 }
 
-
+//MARK: - NetworkLogin
 final class NetworkLogin: NetworkLoginProtocol {
     
+    //MARK: - loginApp
     func loginApp(user: String, password: String) async throws -> String {
-        var token: String = ""
-        do {
-            let request = try await NetworkRequest().requestForLogin(user: user, password: password)
+        let request = try await NetworkRequest().requestForLogin(user: user, password: password)
+        let (data, response) = try await URLSession.shared.data(for: request)
             
-            let (data, response) = try await URLSession.shared.data(for: request)
-            
-            if let resp = response as? HTTPURLResponse{
-                if resp.statusCode == HTTPResponseCodes.SUCESS {
-                    token = String(decoding: data, as: UTF8.self)
-                }
-            }
-        } catch {
+        guard let httpResponse = (response as? HTTPURLResponse),
+              httpResponse.getStatusCode() == HTTPResponseCodes.SUCESS else {
+            throw NetworkError.statusCodeError(response.getStatusCode())
+        }
+        guard let token = String(data: data, encoding: .utf8) else {
             throw NetworkError.tokenFormatError
         }
         return token
     }
 }
+

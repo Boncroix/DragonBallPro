@@ -11,6 +11,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="DragonBallPro" customModuleProvider="target">
             <connections>
+                <outlet property="buttonLogin" destination="V3D-gy-51C" id="KJv-0A-Rio"/>
+                <outlet property="constraintBoottomLoginButton" destination="STX-v6-iSC" id="mBd-bP-i0J"/>
+                <outlet property="lblEmailError" destination="n2B-VQ-18B" id="Ujr-cG-utO"/>
+                <outlet property="lblErrorPassword" destination="s4u-ag-7De" id="Vrm-rh-cN2"/>
+                <outlet property="loadingView" destination="rsn-i1-8ag" id="yIg-hb-WEe"/>
+                <outlet property="txtEmail" destination="KYQ-om-g4W" id="2YY-5n-31m"/>
+                <outlet property="txtPassword" destination="94L-dZ-iDS" id="Kai-X7-9AB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,17 +29,23 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImageBackground" translatesAutoresizingMaskIntoConstraints="NO" id="nbA-y9-aRr">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                 </imageView>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="z0e-Gs-RQa">
-                    <rect key="frame" x="16" y="616" width="361" height="96"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title" translatesAutoresizingMaskIntoConstraints="NO" id="al0-M0-iGZ">
+                    <rect key="frame" x="12" y="59" width="369" height="120"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="azD-Az-NuK"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="z0e-Gs-RQa">
+                    <rect key="frame" x="16" y="676" width="361" height="80"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ieZ-Db-gAY">
-                            <rect key="frame" x="0.0" y="0.0" width="361" height="40"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="ieZ-Db-gAY">
+                            <rect key="frame" x="0.0" y="0.0" width="361" height="36"/>
                             <subviews>
                                 <textField opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KYQ-om-g4W">
-                                    <rect key="frame" x="0.0" y="0.0" width="361" height="40"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="361" height="36"/>
                                     <color key="backgroundColor" systemColor="systemGray5Color"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="40" id="2FI-4Q-3Je"/>
+                                        <constraint firstAttribute="height" constant="36" id="2FI-4Q-3Je"/>
                                     </constraints>
                                     <color key="textColor" name="BlackAndWhite"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -46,14 +59,14 @@
                                 </label>
                             </subviews>
                         </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rnP-Lh-IuU">
-                            <rect key="frame" x="0.0" y="56" width="361" height="40"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="rnP-Lh-IuU">
+                            <rect key="frame" x="0.0" y="44" width="361" height="36"/>
                             <subviews>
                                 <textField opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="94L-dZ-iDS">
-                                    <rect key="frame" x="0.0" y="0.0" width="361" height="40"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="361" height="36"/>
                                     <color key="backgroundColor" systemColor="systemGray5Color"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="40" id="eGW-mP-Jdk"/>
+                                        <constraint firstAttribute="height" constant="36" id="eGW-mP-Jdk"/>
                                     </constraints>
                                     <color key="textColor" name="BlackAndWhite"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -70,9 +83,9 @@
                     </subviews>
                 </stackView>
                 <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3D-gy-51C">
-                    <rect key="frame" x="50" y="728" width="293" height="40"/>
+                    <rect key="frame" x="50" y="772" width="293" height="36"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="Ttt-28-1gz"/>
+                        <constraint firstAttribute="height" constant="36" id="Ttt-28-1gz"/>
                     </constraints>
                     <color key="tintColor" name="BlueAndRedColor"/>
                     <state key="normal" title="Button"/>
@@ -101,8 +114,11 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="V3D-gy-51C" secondAttribute="trailing" constant="50" id="Ljd-Ks-F2O"/>
                 <constraint firstItem="nbA-y9-aRr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="M4X-Bp-Kav"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="z0e-Gs-RQa" secondAttribute="trailing" constant="16" id="NHh-D9-paq"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="V3D-gy-51C" secondAttribute="bottom" constant="50" id="STX-v6-iSC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="V3D-gy-51C" secondAttribute="bottom" constant="10" id="STX-v6-iSC"/>
+                <constraint firstItem="al0-M0-iGZ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ZC9-dg-64l"/>
+                <constraint firstItem="al0-M0-iGZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="dTy-XP-064"/>
                 <constraint firstItem="nbA-y9-aRr" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="dyV-xi-FPP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="al0-M0-iGZ" secondAttribute="trailing" constant="12" id="gSt-vk-yhj"/>
                 <constraint firstItem="z0e-Gs-RQa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="iAF-mm-JaM"/>
                 <constraint firstItem="nbA-y9-aRr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="p2b-xc-OeJ"/>
                 <constraint firstItem="V3D-gy-51C" firstAttribute="top" secondItem="z0e-Gs-RQa" secondAttribute="bottom" constant="16" id="rw2-et-7dG"/>
@@ -113,6 +129,7 @@
     </objects>
     <resources>
         <image name="ImageBackground" width="322.66665649414062" height="557.33331298828125"/>
+        <image name="title" width="787" height="136"/>
         <namedColor name="BlackAndWhite">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

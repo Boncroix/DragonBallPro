@@ -12,25 +12,25 @@ struct  NetworkRequest {
     
     //MARK: - Request For Login
     func requestForLogin(user: String, password: String) async throws -> URLRequest {
-        guard let url = host?.appendingPathComponent(HTTPEndPoints.login.rawValue) else {
+        
+        guard let url = URL(string: "\(ConstantsApp.CONST_API_URL)\(HTTPEndPoints.login.rawValue)") else {
             throw NetworkError.malformedURL
         }
         
-        let encodeCredentials = "\(user):\(password)".data(using: .utf8)?.base64EncodedString()
-        guard let segCredential = encodeCredentials else {
+        guard let encodeCredentials = "\(user):\(password)".data(using: .utf8)?.base64EncodedString() else {
             throw NetworkError.dataEncodingFailed
         }
         
         var request = URLRequest(url: url)
         request.httpMethod = HTTPMethods.post
-        request.setValue(HTTPAuthentication.basicCredentials(segCredential),
+        request.setValue(HTTPAuthentication.basicCredentials(encodeCredentials),
                          forHTTPHeaderField: HTTPHeader.authorization)
         return request
     }
 
-    //MARK: - Request For Rest
-    func requestForRest(endPoint: HTTPEndPoints, token: UUID, params: [String: Any]) async throws -> URLRequest {
-        guard let url = host?.appendingPathComponent(endPoint.endpoint()) else {
+    //MARK: - Request For Model
+    func requestForModel(endPoint: HTTPEndPoints, token: String, params: [String: Any]) async throws -> URLRequest {
+        guard let url = URL(string: "\(ConstantsApp.CONST_API_URL)\(endPoint.rawValue)") else {
             throw NetworkError.malformedURL
         }
         

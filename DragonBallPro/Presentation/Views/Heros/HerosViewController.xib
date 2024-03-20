@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HerosViewController" customModule="DragonBallPro" customModuleProvider="target">
             <connections>
+                <outlet property="collectionView" destination="UFp-3E-7oe" id="dAM-0o-uTn"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,23 +19,53 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soy la home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPM-aU-3IH">
-                    <rect key="frame" x="150" y="415.66666666666669" width="93" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImageBackground" translatesAutoresizingMaskIntoConstraints="NO" id="V40-Nl-GDJ">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="27h-se-NIn">
+                    <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                    <subviews>
+                        <searchBar opaque="NO" alpha="0.80000000000000004" contentMode="redraw" placeholder="Search" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GI1-vB-EDr">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="8Qc-UQ-b16"/>
+                            </constraints>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="UFp-3E-7oe">
+                            <rect key="frame" x="0.0" y="40" width="393" height="753"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mBu-r5-eal">
+                                <size key="itemSize" width="128" height="128"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="FcL-Mk-a2m"/>
+                                <outlet property="delegate" destination="-1" id="ppI-PS-ZKN"/>
+                            </connections>
+                        </collectionView>
+                    </subviews>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="mPM-aU-3IH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="6oU-kE-SbU"/>
-                <constraint firstItem="mPM-aU-3IH" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="IXR-VG-kuG"/>
+                <constraint firstItem="27h-se-NIn" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="BKU-p3-iEy"/>
+                <constraint firstItem="V40-Nl-GDJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ERb-6g-kFz"/>
+                <constraint firstAttribute="bottom" secondItem="27h-se-NIn" secondAttribute="bottom" id="QDQ-x5-hjF"/>
+                <constraint firstItem="27h-se-NIn" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Qqe-b3-dGw"/>
+                <constraint firstItem="V40-Nl-GDJ" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="Rld-cI-wZL"/>
+                <constraint firstItem="V40-Nl-GDJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="W7v-JS-t19"/>
+                <constraint firstItem="27h-se-NIn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="vtS-mB-ykj"/>
+                <constraint firstAttribute="bottom" secondItem="V40-Nl-GDJ" secondAttribute="bottom" id="wob-NC-PVx"/>
             </constraints>
-            <point key="canvasLocation" x="132" y="-11"/>
+            <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
         </view>
     </objects>
     <resources>
+        <image name="ImageBackground" width="322.66665649414062" height="557.33331298828125"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

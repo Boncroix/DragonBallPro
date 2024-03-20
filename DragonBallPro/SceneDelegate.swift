@@ -11,8 +11,8 @@ import Combine
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
-    var appState: AppState = AppState(loginUseCase: LoginUseCase())
-    var cancelable: AnyCancellable?
+    private var appState: AppState = AppState(loginUseCase: LoginUseCase())
+    private var cancelable: AnyCancellable?
     
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -21,23 +21,28 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         appState.validateControlLogin()
         
-        var nav: UINavigationController?
-        
+        //MARK: - Binding AppState
         self.cancelable = appState.$statusLogin
-            .sink(receiveValue: { estado in
-                switch estado {
+            .sink(receiveValue: { [weak self] status in
+                guard let self = self else { return }
+
+                func setRootViewController(_ viewController: UIViewController) {
+                    let nav = UINavigationController(rootViewController: viewController)
+                    self.window?.rootViewController = nav
+                    self.window?.makeKeyAndVisible()
+                }
+
+                switch status {
                 case .notValidate, .none:
                     DispatchQueue.main.async {
-                        nav = UINavigationController(rootViewController: LoginViewController(appState: self.appState))
-                        self.window?.rootViewController = nav
-                        self.window?.makeKeyAndVisible()
+                        setRootViewController(LoginViewController(appState: self.appState))
                     }
                 case .success:
-                    //la home
-                    print("vamos pal home")
-                case .error:
-                    //error
-                    print("vamos pal error")
+                    DispatchQueue.main.async {
+                        setRootViewController(HerosViewController(appState: self.appState, viewModel: HeroesViewModel()))
+                    }
+                default:
+                    break
                 }
             })
     }

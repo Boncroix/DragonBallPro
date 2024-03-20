@@ -10,6 +10,18 @@
 		42A233152BA60353004AAE4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42A233142BA60353004AAE4A /* LaunchScreen.storyboard */; };
 		42A2331C2BA60564004AAE4A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A2331A2BA60564004AAE4A /* LoginViewController.swift */; };
 		42A2331D2BA60564004AAE4A /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42A2331B2BA60564004AAE4A /* LoginViewController.xib */; };
+		42A233202BA60A3F004AAE4A /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 42A2331F2BA60A3F004AAE4A /* CombineCocoa */; };
+		42A233222BA8126B004AAE4A /* URLResponse+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A233212BA8126B004AAE4A /* URLResponse+Extension.swift */; };
+		42A233242BA968DB004AAE4A /* LoginStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A233232BA968DB004AAE4A /* LoginStatus.swift */; };
+		42A233282BAA0543004AAE4A /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A233272BAA0543004AAE4A /* Hero.swift */; };
+		42A2332A2BAA0783004AAE4A /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A233292BAA0783004AAE4A /* NetworkModel.swift */; };
+		42A2332C2BAA107C004AAE4A /* HeroesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A2332B2BAA107C004AAE4A /* HeroesViewModel.swift */; };
+		42A2332E2BAA1121004AAE4A /* HeroesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A2332D2BAA1121004AAE4A /* HeroesRepository.swift */; };
+		42A233302BAA1165004AAE4A /* HeroesRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A2332F2BAA1165004AAE4A /* HeroesRepositoryProtocol.swift */; };
+		42A233322BAA12F1004AAE4A /* HeroesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A233312BAA12F1004AAE4A /* HeroesUseCase.swift */; };
+		42A233372BAA3887004AAE4A /* HeroViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A233352BAA3887004AAE4A /* HeroViewCell.swift */; };
+		42A233382BAA3887004AAE4A /* HeroViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42A233362BAA3887004AAE4A /* HeroViewCell.xib */; };
+		42A2333B2BAAB4A4004AAE4A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 42A2333A2BAAB4A4004AAE4A /* Kingfisher */; };
 		42B41B4B2BA4B27F00BCC732 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B41B4A2BA4B27F00BCC732 /* AppDelegate.swift */; };
 		42B41B4D2BA4B27F00BCC732 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B41B4C2BA4B27F00BCC732 /* SceneDelegate.swift */; };
 		42B41B542BA4B28200BCC732 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42B41B532BA4B28200BCC732 /* Assets.xcassets */; };
@@ -21,7 +33,6 @@
 		42B41B952BA4E5C500BCC732 /* HTTPAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B41B942BA4E5C500BCC732 /* HTTPAuthentication.swift */; };
 		42B41B982BA4F37700BCC732 /* NetworkLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B41B972BA4F37700BCC732 /* NetworkLogin.swift */; };
 		42B41B9A2BA4F46000BCC732 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B41B992BA4F46000BCC732 /* NetworkRequest.swift */; };
-		42B41B9E2BA4F8C300BCC732 /* Cofig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42B41B9D2BA4F8C300BCC732 /* Cofig.plist */; };
 		42B41BA02BA5770D00BCC732 /* ConstantsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B41B9F2BA5770D00BCC732 /* ConstantsApp.swift */; };
 		42B41BA22BA57DC600BCC732 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B41BA12BA57DC600BCC732 /* NetworkError.swift */; };
 		42B41BA42BA5830900BCC732 /* NetworkLoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B41BA32BA5830900BCC732 /* NetworkLoginTests.swift */; };
@@ -48,6 +59,16 @@
 		42A233142BA60353004AAE4A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42A2331A2BA60564004AAE4A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		42A2331B2BA60564004AAE4A /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		42A233212BA8126B004AAE4A /* URLResponse+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLResponse+Extension.swift"; sourceTree = "<group>"; };
+		42A233232BA968DB004AAE4A /* LoginStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStatus.swift; sourceTree = "<group>"; };
+		42A233272BAA0543004AAE4A /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		42A233292BAA0783004AAE4A /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
+		42A2332B2BAA107C004AAE4A /* HeroesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesViewModel.swift; sourceTree = "<group>"; };
+		42A2332D2BAA1121004AAE4A /* HeroesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesRepository.swift; sourceTree = "<group>"; };
+		42A2332F2BAA1165004AAE4A /* HeroesRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesRepositoryProtocol.swift; sourceTree = "<group>"; };
+		42A233312BAA12F1004AAE4A /* HeroesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesUseCase.swift; sourceTree = "<group>"; };
+		42A233352BAA3887004AAE4A /* HeroViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroViewCell.swift; sourceTree = "<group>"; };
+		42A233362BAA3887004AAE4A /* HeroViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroViewCell.xib; sourceTree = "<group>"; };
 		42B41B472BA4B27F00BCC732 /* DragonBallPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonBallPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42B41B4A2BA4B27F00BCC732 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42B41B4C2BA4B27F00BCC732 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,7 +83,6 @@
 		42B41B942BA4E5C500BCC732 /* HTTPAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPAuthentication.swift; sourceTree = "<group>"; };
 		42B41B972BA4F37700BCC732 /* NetworkLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogin.swift; sourceTree = "<group>"; };
 		42B41B992BA4F46000BCC732 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
-		42B41B9D2BA4F8C300BCC732 /* Cofig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Cofig.plist; sourceTree = "<group>"; };
 		42B41B9F2BA5770D00BCC732 /* ConstantsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsApp.swift; sourceTree = "<group>"; };
 		42B41BA12BA57DC600BCC732 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		42B41BA32BA5830900BCC732 /* NetworkLoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLoginTests.swift; sourceTree = "<group>"; };
@@ -79,6 +99,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42A2333B2BAAB4A4004AAE4A /* Kingfisher in Frameworks */,
+				42A233202BA60A3F004AAE4A /* CombineCocoa in Frameworks */,
 				42B41BAF2BA5930300BCC732 /* KeychainSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,6 +115,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		42A233342BAA3865004AAE4A /* HerosCell */ = {
+			isa = PBXGroup;
+			children = (
+				42A233352BAA3887004AAE4A /* HeroViewCell.swift */,
+				42A233362BAA3887004AAE4A /* HeroViewCell.xib */,
+			);
+			path = HerosCell;
+			sourceTree = "<group>";
+		};
 		42B41B3E2BA4B27F00BCC732 = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				42B41B882BA4DD9600BCC732 /* AppState.swift */,
+				42A2332B2BAA107C004AAE4A /* HeroesViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -187,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				42B41B822BA4B8FF00BCC732 /* BaseNetwork */,
+				42A233292BAA0783004AAE4A /* NetworkModel.swift */,
 				42B41B972BA4F37700BCC732 /* NetworkLogin.swift */,
 				42B41B992BA4F46000BCC732 /* NetworkRequest.swift */,
 			);
@@ -205,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				42B41BB32BA59CCD00BCC732 /* LoginRepository.swift */,
+				42A2332D2BAA1121004AAE4A /* HeroesRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -217,7 +251,6 @@
 				42B41B8C2BA4DF7B00BCC732 /* HTTPMethods.swift */,
 				42B41B912BA4E39700BCC732 /* HTTPHeader.swift */,
 				42B41B942BA4E5C500BCC732 /* HTTPAuthentication.swift */,
-				42B41B9D2BA4F8C300BCC732 /* Cofig.plist */,
 				42B41BA12BA57DC600BCC732 /* NetworkError.swift */,
 			);
 			path = BaseNetwork;
@@ -227,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				42B41BB52BA59D9C00BCC732 /* LoginRepositoryProtocols.swift */,
+				42A2332F2BAA1165004AAE4A /* HeroesRepositoryProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -243,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				42B41BB72BA59F5000BCC732 /* LoginUseCase.swift */,
+				42A233312BAA12F1004AAE4A /* HeroesUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -250,6 +285,7 @@
 		42B41B862BA4B93900BCC732 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				42A233212BA8126B004AAE4A /* URLResponse+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -257,6 +293,8 @@
 		42B41B872BA4B94500BCC732 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				42A233232BA968DB004AAE4A /* LoginStatus.swift */,
+				42A233272BAA0543004AAE4A /* Hero.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -320,6 +358,7 @@
 		42B41BBE2BA5A5BF00BCC732 /* Heros */ = {
 			isa = PBXGroup;
 			children = (
+				42A233342BAA3865004AAE4A /* HerosCell */,
 				42B41BBF2BA5A5D100BCC732 /* HerosViewController.swift */,
 				42B41BC02BA5A5D100BCC732 /* HerosViewController.xib */,
 			);
@@ -344,6 +383,8 @@
 			name = DragonBallPro;
 			packageProductDependencies = (
 				42B41BAE2BA5930300BCC732 /* KeychainSwift */,
+				42A2331F2BA60A3F004AAE4A /* CombineCocoa */,
+				42A2333A2BAAB4A4004AAE4A /* Kingfisher */,
 			);
 			productName = DragonBallPro;
 			productReference = 42B41B472BA4B27F00BCC732 /* DragonBallPro.app */;
@@ -397,6 +438,8 @@
 			mainGroup = 42B41B3E2BA4B27F00BCC732;
 			packageReferences = (
 				42B41BAD2BA5930300BCC732 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+				42A2331E2BA60A3F004AAE4A /* XCRemoteSwiftPackageReference "CombineCocoa" */,
+				42A233392BAAB4A4004AAE4A /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 42B41B482BA4B27F00BCC732 /* Products */;
 			projectDirPath = "";
@@ -417,7 +460,7 @@
 				42B41BC22BA5A5D100BCC732 /* HerosViewController.xib in Resources */,
 				42B41B542BA4B28200BCC732 /* Assets.xcassets in Resources */,
 				42A233152BA60353004AAE4A /* LaunchScreen.storyboard in Resources */,
-				42B41B9E2BA4F8C300BCC732 /* Cofig.plist in Resources */,
+				42A233382BAA3887004AAE4A /* HeroViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,17 +479,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				42A2331C2BA60564004AAE4A /* LoginViewController.swift in Sources */,
+				42A233242BA968DB004AAE4A /* LoginStatus.swift in Sources */,
 				42B41B8D2BA4DF7B00BCC732 /* HTTPMethods.swift in Sources */,
+				42A233222BA8126B004AAE4A /* URLResponse+Extension.swift in Sources */,
 				42B41BB62BA59D9C00BCC732 /* LoginRepositoryProtocols.swift in Sources */,
 				42B41B892BA4DD9600BCC732 /* AppState.swift in Sources */,
 				42B41B4B2BA4B27F00BCC732 /* AppDelegate.swift in Sources */,
+				42A233322BAA12F1004AAE4A /* HeroesUseCase.swift in Sources */,
+				42A2332E2BAA1121004AAE4A /* HeroesRepository.swift in Sources */,
 				42B41BB42BA59CCD00BCC732 /* LoginRepository.swift in Sources */,
 				42B41BB22BA5934E00BCC732 /* KeyChainStorage.swift in Sources */,
+				42A233302BAA1165004AAE4A /* HeroesRepositoryProtocol.swift in Sources */,
 				42B41BC12BA5A5D100BCC732 /* HerosViewController.swift in Sources */,
 				42B41B982BA4F37700BCC732 /* NetworkLogin.swift in Sources */,
+				42A233282BAA0543004AAE4A /* Hero.swift in Sources */,
 				42B41B9A2BA4F46000BCC732 /* NetworkRequest.swift in Sources */,
 				42B41BA02BA5770D00BCC732 /* ConstantsApp.swift in Sources */,
+				42A2332A2BAA0783004AAE4A /* NetworkModel.swift in Sources */,
+				42A2332C2BAA107C004AAE4A /* HeroesViewModel.swift in Sources */,
 				42B41B952BA4E5C500BCC732 /* HTTPAuthentication.swift in Sources */,
+				42A233372BAA3887004AAE4A /* HeroViewCell.swift in Sources */,
 				42B41B8F2BA4DFDC00BCC732 /* HTTPResponseCodes.swift in Sources */,
 				42B41B8B2BA4DEDA00BCC732 /* HTTPEndPoints.swift in Sources */,
 				42B41BA22BA57DC600BCC732 /* NetworkError.swift in Sources */,
@@ -721,17 +773,43 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		42A2331E2BA60A3F004AAE4A /* XCRemoteSwiftPackageReference "CombineCocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CombineCommunity/CombineCocoa.git";
+			requirement = {
+				kind = exactVersion;
+				version = 0.4.1;
+			};
+		};
+		42A233392BAAB4A4004AAE4A /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = exactVersion;
+				version = 7.11.0;
+			};
+		};
 		42B41BAD2BA5930300BCC732 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 21.0.0;
+				kind = exactVersion;
+				version = 21.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		42A2331F2BA60A3F004AAE4A /* CombineCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 42A2331E2BA60A3F004AAE4A /* XCRemoteSwiftPackageReference "CombineCocoa" */;
+			productName = CombineCocoa;
+		};
+		42A2333A2BAAB4A4004AAE4A /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 42A233392BAAB4A4004AAE4A /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		42B41BAE2BA5930300BCC732 /* KeychainSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 42B41BAD2BA5930300BCC732 /* XCRemoteSwiftPackageReference "keychain-swift" */;
