@@ -33,7 +33,6 @@ struct  NetworkRequest {
         guard let url = URL(string: "\(ConstantsApp.CONST_API_URL)\(endPoint.rawValue)") else {
             throw NetworkError.malformedURL
         }
-        
         guard let jsonParameters = try? JSONSerialization.data(withJSONObject: params) else {
             throw NetworkError.dataEncodingFailed
         }

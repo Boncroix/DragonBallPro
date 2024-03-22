@@ -67,9 +67,9 @@ extension LoginViewController {
         if let txtEmail = self.txtEmail {
             txtEmail.textPublisher
                 .receive(on: DispatchQueue.main)
-                .sink { data in
+                .sink { [weak self] data in
                     if let user = data {
-                        self.user = user
+                        self?.user = user
                     }
                 }
                 .store(in: &suscriptors)
@@ -77,9 +77,9 @@ extension LoginViewController {
         if let txtPassword = self.txtPassword {
             txtPassword.textPublisher
                 .receive(on: DispatchQueue.main)
-                .sink { data in
+                .sink { [weak self] data in
                     if let pass = data {
-                        self.pass = pass
+                        self?.pass = pass
                     }
                 }
                 .store(in: &suscriptors)
@@ -104,25 +104,27 @@ extension LoginViewController {
         self.cancelable = appState.$statusLogin
             .receive(on: DispatchQueue.main)
             .sink(receiveValue: { [weak self] status in
+                guard let self = self else { return }
+                
                 switch status {
                 case.loading(_):
-                    self?.lblErrorPassword.isHidden = true
-                    self?.loadingView.isHidden = false
-                    self?.lblEmailError.isHidden = true
+                    self.lblErrorPassword.isHidden = true
+                    self.loadingView.isHidden = false
+                    self.lblEmailError.isHidden = true
                     
                 case .showErrorEmail(let error):
-                    self?.loadingView.isHidden = true
-                    self?.lblEmailError.text = error
-                    self?.lblEmailError.isHidden = false
+                    self.loadingView.isHidden = true
+                    self.lblEmailError.text = error
+                    self.lblEmailError.isHidden = false
                     
                 case .showErrorPassword(let error):
-                    self?.loadingView.isHidden = true
-                    self?.lblErrorPassword.text = error
-                    self?.lblErrorPassword.isHidden = false
+                    self.loadingView.isHidden = true
+                    self.lblErrorPassword.text = error
+                    self.lblErrorPassword.isHidden = false
                     
                 case .errorNetwork(let errorMessage):
-                    self?.loadingView.isHidden = true
-                    self?.showAlert(message: errorMessage ?? "")
+                    self.loadingView.isHidden = true
+                    self.showAlert(message: errorMessage ?? "")
                     
                 default: break
                 }

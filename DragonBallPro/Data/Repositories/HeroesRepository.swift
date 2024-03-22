@@ -15,7 +15,7 @@ final class HeroesRepository: HeroesRepositoryProtocol {
         self.network = network
     }
     
-    func getModel(params: [String : Any], token: String) async throws -> [Hero] {
+    func getHeroes(params: [String: Any], token: String) async throws -> [Hero] {
         try await network.getModel(endPoint: HTTPEndPoints.heros, params: params, token: token)
     }
 }

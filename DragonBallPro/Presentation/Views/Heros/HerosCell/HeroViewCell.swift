@@ -25,6 +25,6 @@ final class HeroViewCell: UICollectionViewCell {
         guard let imageURL = URL(string: hero.photo ?? "") else {
             return
         }     
-        imageHero.kf.setImage(with: imageURL, options:  [.transition(.fade(0.2))])
+        imageHero.kf.setImage(with: imageURL)
     }
 }

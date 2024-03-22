@@ -10,7 +10,7 @@ import Foundation
 //MARK: - Protocol
 protocol HeroesUseCaseProtocol {
     var repo: HeroesRepositoryProtocol {get set}
-    func getHeroes(params: [String : Any]) async throws -> [Hero]
+    func getHeroes(params: [String: Any]) async throws -> [Hero]
 }
 
 final class HeroesUseCase: HeroesUseCaseProtocol {
@@ -27,10 +27,10 @@ final class HeroesUseCase: HeroesUseCaseProtocol {
     }
     
     //MARK: - GetHeroes
-    func getHeroes(params: [String : Any]) async throws -> [Hero] {
+    func getHeroes(params: [String: Any]) async throws -> [Hero] {
         guard let token = secureData.getToken() else {
             throw NetworkError.tokenFormatError
         }
-        return try await repo.getModel(params: params, token: token)
+        return try await repo.getHeroes(params: params, token: token)
     }
 }

@@ -8,7 +8,7 @@
 import Foundation
 
 struct Hero: Decodable {
-    let id: UUID?
+    let id: UUID
     let name: String?
     let description: String?
     let photo: String?

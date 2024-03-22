@@ -16,6 +16,7 @@ final class NetworkModel: NetworkModelProtocol {
     
     //MARK: - GetModel
     func getModel<T: Decodable>(endPoint: HTTPEndPoints, params: [String: Any], token: String) async throws -> [T] {
+
         let request = try await NetworkRequest().requestForModel(endPoint: endPoint, token: token, params: params)
         let (data, response) = try await URLSession.shared.data(for: request)
         

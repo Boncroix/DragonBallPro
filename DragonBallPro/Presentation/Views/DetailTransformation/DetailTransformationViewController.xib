@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailTransformationViewController" customModule="DragonBallPro" customModuleProvider="target">
+            <connections>
+                <outlet property="descriptionTransformation" destination="Vi9-Bl-vDg" id="f03-Ef-jaL"/>
+                <outlet property="imageTransformation" destination="kR4-cM-dk4" id="F79-4Q-3lK"/>
+                <outlet property="nameTransformation" destination="fas-vr-orC" id="mya-3U-e2x"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImageBackground" translatesAutoresizingMaskIntoConstraints="NO" id="bta-CI-Gxx">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Transformation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fas-vr-orC">
+                    <rect key="frame" x="12" y="59" width="369" height="33.666666666666657"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                    <color key="textColor" name="BlackAndWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6Hj-fm-7E0">
+                    <rect key="frame" x="0.0" y="92.666666666666686" width="393" height="725.33333333333326"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kR4-cM-dk4">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="358.66666666666669"/>
+                        </imageView>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Vi9-Bl-vDg">
+                            <rect key="frame" x="0.0" y="366.66666666666663" width="393" height="358.66666666666663"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                            <color key="textColor" name="BlackAndWhite"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fas-vr-orC" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Bjz-mo-OT1"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="6Hj-fm-7E0" secondAttribute="bottom" id="GWa-Dm-zdP"/>
+                <constraint firstAttribute="bottom" secondItem="bta-CI-Gxx" secondAttribute="bottom" id="GZW-uB-ghP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fas-vr-orC" secondAttribute="trailing" constant="12" id="JMu-DP-pfp"/>
+                <constraint firstItem="fas-vr-orC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="LwR-gX-FEP"/>
+                <constraint firstItem="6Hj-fm-7E0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="TWu-yi-07k"/>
+                <constraint firstAttribute="trailing" secondItem="bta-CI-Gxx" secondAttribute="trailing" id="cT5-4x-9mN"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6Hj-fm-7E0" secondAttribute="trailing" id="fDu-7X-OjI"/>
+                <constraint firstItem="bta-CI-Gxx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="kNR-pk-Doq"/>
+                <constraint firstItem="6Hj-fm-7E0" firstAttribute="top" secondItem="fas-vr-orC" secondAttribute="bottom" id="pHR-0k-Jdw"/>
+                <constraint firstItem="bta-CI-Gxx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="tUr-3T-QYK"/>
+            </constraints>
+            <point key="canvasLocation" x="-40" y="-11"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ImageBackground" width="322.66665649414062" height="557.33331298828125"/>
+        <namedColor name="BlackAndWhite">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
