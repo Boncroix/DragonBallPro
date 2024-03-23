@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import KeyChainJB
 
 //MARK: - Protocol
 protocol DetailUseCaseProtocol {
@@ -28,7 +29,7 @@ final class DetailUseCase: DetailUseCaseProtocol {
     
     //MARK: - GetLocations
     func getLocations(params: [String: Any]) async throws -> [Location] {
-        guard let token = secureData.getToken() else {
+        guard let token = secureData.getToken(key: ConstantsApp.CONST_TOKEN_ID_KEYCHAIN) else {
             throw NetworkError.tokenFormatError
         }
         return try await repo.getLocations(params: params, token: token)
@@ -36,7 +37,7 @@ final class DetailUseCase: DetailUseCaseProtocol {
     
     //MARK: - GetTransformations
     func getTransformations(params: [String: Any]) async throws -> [Transformation] {
-        guard let token = secureData.getToken() else {
+        guard let token = secureData.getToken(key: ConstantsApp.CONST_TOKEN_ID_KEYCHAIN) else {
             throw NetworkError.tokenFormatError
         }
         return try await repo.getTransformations(params: params, token: token)

@@ -41,7 +41,7 @@
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="ieZ-Db-gAY">
                             <rect key="frame" x="0.0" y="0.0" width="361" height="36"/>
                             <subviews>
-                                <textField opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KYQ-om-g4W">
+                                <textField opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KYQ-om-g4W">
                                     <rect key="frame" x="0.0" y="0.0" width="361" height="36"/>
                                     <color key="backgroundColor" systemColor="systemGray5Color"/>
                                     <constraints>
@@ -62,7 +62,7 @@
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="rnP-Lh-IuU">
                             <rect key="frame" x="0.0" y="44" width="361" height="36"/>
                             <subviews>
-                                <textField opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="94L-dZ-iDS">
+                                <textField opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="94L-dZ-iDS">
                                     <rect key="frame" x="0.0" y="0.0" width="361" height="36"/>
                                     <color key="backgroundColor" systemColor="systemGray5Color"/>
                                     <constraints>

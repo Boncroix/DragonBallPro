@@ -9,12 +9,22 @@ import XCTest
 @testable import DragonBallPro
 
 final class NetworkLoginTests: XCTestCase {
-
-    override func setUpWithError() throws {
+    
+    func testNetworkLogin() async throws {
         
-    }
-
-    override func tearDownWithError() throws {
+        let obj1 = NetworkLogin()
+        XCTAssertNotNil(obj1)
+        let obj2 = NetworkLoginFake()
+        XCTAssertNotNil(obj2)
         
+        let tokenFake = try await obj2.loginApp(user: "", password: "")
+        XCTAssertNotEqual(tokenFake, "")
+        
+        do {
+            let error = try await obj1.loginApp(user: "jose", password: "12345")
+        } catch {
+            let errorMessage = errorMessage(for: error)
+            XCTAssertEqual(errorMessage, "ERROR CODE 401")
+        }
     }
 }

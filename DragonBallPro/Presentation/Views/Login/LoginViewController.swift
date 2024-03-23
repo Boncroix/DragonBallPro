@@ -43,6 +43,7 @@ final class LoginViewController: UIViewController {
         bindingUI()
         showStatus()
         configUI()
+        internationalization()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -144,7 +145,15 @@ extension LoginViewController {
         txtPassword.rightView = showPasswordButton
         txtPassword.rightViewMode = .always
     }
+    
+    private func internationalization() {
+        txtEmail.placeholder = NSLocalizedString("Email", comment: "This is Email")
+        txtPassword.placeholder = NSLocalizedString("Password", comment: "This is Password")
+        buttonLogin.setTitle(NSLocalizedString("Login", comment: "Login Button title"), for: .normal)
+        buttonLogin.titleLabel?.font = UIFont.boldSystemFont(ofSize: 24)
+    }
 }
+
 // MARK: - Alert
 extension LoginViewController {
     /// Crear alert para el networkError

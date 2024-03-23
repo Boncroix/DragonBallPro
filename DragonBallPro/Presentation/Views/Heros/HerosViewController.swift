@@ -22,7 +22,7 @@ final class HerosViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     //MARK: - Inits
-    init(appState: AppState, viewModel: HeroesViewModel) {
+    init(appState: AppState, viewModel: HeroesViewModel = HeroesViewModel()) {
         self.appState = appState
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -39,6 +39,7 @@ final class HerosViewController: UIViewController {
         configUI()
         binding()
         bindingUI()
+        internationalization()
     }
 }
 
@@ -115,6 +116,10 @@ extension HerosViewController {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: 190, height: 190)
         collectionView.collectionViewLayout = layout
+    }
+    
+    private func internationalization() {
+        heroSearch.placeholder = NSLocalizedString("search", comment: "placeholder search")
     }
     
     @objc func segmentedControlValueChanged(_ sender: UISegmentedControl) {

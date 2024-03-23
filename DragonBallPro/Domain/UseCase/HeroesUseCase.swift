@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import KeyChainJB
 
 //MARK: - Protocol
 protocol HeroesUseCaseProtocol {
@@ -28,7 +29,7 @@ final class HeroesUseCase: HeroesUseCaseProtocol {
     
     //MARK: - GetHeroes
     func getHeroes(params: [String: Any]) async throws -> [Hero] {
-        guard let token = secureData.getToken() else {
+        guard let token = secureData.getToken(key: ConstantsApp.CONST_TOKEN_ID_KEYCHAIN) else {
             throw NetworkError.tokenFormatError
         }
         return try await repo.getHeroes(params: params, token: token)

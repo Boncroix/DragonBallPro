@@ -23,11 +23,11 @@ final class AppState {
         self.statusLogin = .loading(true)
         
         guard let email = email, isValid(email: email) else {
-            self.statusLogin = .showErrorEmail("Error en el Email")
+            self.statusLogin = .showErrorEmail(NSLocalizedString("errorEmail", comment: "ErrorEmail"))
             return
         }
         guard let password = password, isValid(password: password) else {
-            self.statusLogin = .showErrorPassword("Contraseña debe tener 4 o más caracteres")
+            self.statusLogin = .showErrorPassword(NSLocalizedString("errorPassword", comment: "ErrorPassword"))
             return
         }
         loginApp(user: email, password: password)

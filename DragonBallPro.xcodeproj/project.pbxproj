@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		428211A72BAECB9D00D8ABD9 /* KeyChainJB in Frameworks */ = {isa = PBXBuildFile; productRef = 428211A62BAECB9D00D8ABD9 /* KeyChainJB */; };
+		428211AB2BAEEB0500D8ABD9 /* UseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428211AA2BAEEB0500D8ABD9 /* UseCaseTest.swift */; };
+		428211B62BAF0D5300D8ABD9 /* ViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428211B52BAF0D5300D8ABD9 /* ViewTest.swift */; };
+		428211C52BAF553000D8ABD9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 428211C72BAF553000D8ABD9 /* Localizable.strings */; };
 		42A233152BA60353004AAE4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42A233142BA60353004AAE4A /* LaunchScreen.storyboard */; };
 		42A2331C2BA60564004AAE4A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A2331A2BA60564004AAE4A /* LoginViewController.swift */; };
 		42A2331D2BA60564004AAE4A /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42A2331B2BA60564004AAE4A /* LoginViewController.xib */; };
@@ -50,8 +54,6 @@
 		42B41BA02BA5770D00BCC732 /* ConstantsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B41B9F2BA5770D00BCC732 /* ConstantsApp.swift */; };
 		42B41BA22BA57DC600BCC732 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B41BA12BA57DC600BCC732 /* NetworkError.swift */; };
 		42B41BA42BA5830900BCC732 /* NetworkLoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B41BA32BA5830900BCC732 /* NetworkLoginTests.swift */; };
-		42B41BAF2BA5930300BCC732 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 42B41BAE2BA5930300BCC732 /* KeychainSwift */; };
-		42B41BB22BA5934E00BCC732 /* KeyChainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B41BB12BA5934E00BCC732 /* KeyChainStorage.swift */; };
 		42B41BB42BA59CCD00BCC732 /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B41BB32BA59CCD00BCC732 /* LoginRepository.swift */; };
 		42B41BB62BA59D9C00BCC732 /* LoginRepositoryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B41BB52BA59D9C00BCC732 /* LoginRepositoryProtocols.swift */; };
 		42B41BB82BA59F5000BCC732 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B41BB72BA59F5000BCC732 /* LoginUseCase.swift */; };
@@ -70,6 +72,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		428211AA2BAEEB0500D8ABD9 /* UseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseTest.swift; sourceTree = "<group>"; };
+		428211B52BAF0D5300D8ABD9 /* ViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTest.swift; sourceTree = "<group>"; };
+		428211C62BAF553000D8ABD9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		428211C82BAF553100D8ABD9 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		42A233142BA60353004AAE4A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42A2331A2BA60564004AAE4A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		42A2331B2BA60564004AAE4A /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -114,7 +120,6 @@
 		42B41B9F2BA5770D00BCC732 /* ConstantsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsApp.swift; sourceTree = "<group>"; };
 		42B41BA12BA57DC600BCC732 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		42B41BA32BA5830900BCC732 /* NetworkLoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLoginTests.swift; sourceTree = "<group>"; };
-		42B41BB12BA5934E00BCC732 /* KeyChainStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainStorage.swift; sourceTree = "<group>"; };
 		42B41BB32BA59CCD00BCC732 /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
 		42B41BB52BA59D9C00BCC732 /* LoginRepositoryProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepositoryProtocols.swift; sourceTree = "<group>"; };
 		42B41BB72BA59F5000BCC732 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
@@ -129,7 +134,7 @@
 			files = (
 				42A2333B2BAAB4A4004AAE4A /* Kingfisher in Frameworks */,
 				42A233202BA60A3F004AAE4A /* CombineCocoa in Frameworks */,
-				42B41BAF2BA5930300BCC732 /* KeychainSwift in Frameworks */,
+				428211A72BAECB9D00D8ABD9 /* KeyChainJB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +148,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		428211A82BAEEABF00D8ABD9 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				428211A92BAEEAD000D8ABD9 /* UseCase */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		428211A92BAEEAD000D8ABD9 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				428211AA2BAEEB0500D8ABD9 /* UseCaseTest.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		428211B32BAF0D2300D8ABD9 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				428211B42BAF0D3400D8ABD9 /* Views */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		428211B42BAF0D3400D8ABD9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				428211B52BAF0D5300D8ABD9 /* ViewTest.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		42A233342BAA3865004AAE4A /* HerosCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,8 +260,8 @@
 		42B41B602BA4B28200BCC732 /* DragonBallProTests */ = {
 			isa = PBXGroup;
 			children = (
-				42B41BA92BA5889200BCC732 /* Helpers */,
-				42B41BA62BA5836100BCC732 /* Mocks */,
+				428211B32BAF0D2300D8ABD9 /* Presentation */,
+				428211A82BAEEABF00D8ABD9 /* Domain */,
 				42B41BA52BA5835200BCC732 /* Data */,
 			);
 			path = DragonBallProTests;
@@ -297,7 +334,6 @@
 		42B41B802BA4B87300BCC732 /* Local */ = {
 			isa = PBXGroup;
 			children = (
-				42B41BB02BA5933500BCC732 /* KeyChain */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -375,6 +411,7 @@
 		42B41B962BA4E76800BCC732 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				428211C72BAF553000D8ABD9 /* Localizable.strings */,
 				42B41B532BA4B28200BCC732 /* Assets.xcassets */,
 				42A233142BA60353004AAE4A /* LaunchScreen.storyboard */,
 			);
@@ -390,34 +427,12 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
-		42B41BA62BA5836100BCC732 /* Mocks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Mocks;
-			sourceTree = "<group>";
-		};
-		42B41BA92BA5889200BCC732 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
 		42B41BAC2BA5899F00BCC732 /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				42B41BA32BA5830900BCC732 /* NetworkLoginTests.swift */,
 			);
 			path = Network;
-			sourceTree = "<group>";
-		};
-		42B41BB02BA5933500BCC732 /* KeyChain */ = {
-			isa = PBXGroup;
-			children = (
-				42B41BB12BA5934E00BCC732 /* KeyChainStorage.swift */,
-			);
-			path = KeyChain;
 			sourceTree = "<group>";
 		};
 		42B41BB92BA5A56000BCC732 /* Login */ = {
@@ -456,9 +471,9 @@
 			);
 			name = DragonBallPro;
 			packageProductDependencies = (
-				42B41BAE2BA5930300BCC732 /* KeychainSwift */,
 				42A2331F2BA60A3F004AAE4A /* CombineCocoa */,
 				42A2333A2BAAB4A4004AAE4A /* Kingfisher */,
+				428211A62BAECB9D00D8ABD9 /* KeyChainJB */,
 			);
 			productName = DragonBallPro;
 			productReference = 42B41B472BA4B27F00BCC732 /* DragonBallPro.app */;
@@ -507,13 +522,14 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				es,
 				Base,
 			);
 			mainGroup = 42B41B3E2BA4B27F00BCC732;
 			packageReferences = (
-				42B41BAD2BA5930300BCC732 /* XCRemoteSwiftPackageReference "keychain-swift" */,
 				42A2331E2BA60A3F004AAE4A /* XCRemoteSwiftPackageReference "CombineCocoa" */,
 				42A233392BAAB4A4004AAE4A /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				428211A52BAECB9D00D8ABD9 /* XCRemoteSwiftPackageReference "KeyChainJB" */,
 			);
 			productRefGroup = 42B41B482BA4B27F00BCC732 /* Products */;
 			projectDirPath = "";
@@ -534,6 +550,7 @@
 				42A2331D2BA60564004AAE4A /* LoginViewController.xib in Resources */,
 				42A233562BAC2894004AAE4A /* DetailViewController.xib in Resources */,
 				42B41BC22BA5A5D100BCC732 /* HerosViewController.xib in Resources */,
+				428211C52BAF553000D8ABD9 /* Localizable.strings in Resources */,
 				42B41B542BA4B28200BCC732 /* Assets.xcassets in Resources */,
 				42A233152BA60353004AAE4A /* LaunchScreen.storyboard in Resources */,
 				42A233692BACC385004AAE4A /* TransformationCell.xib in Resources */,
@@ -570,7 +587,6 @@
 				42A2332E2BAA1121004AAE4A /* HeroesRepository.swift in Sources */,
 				42A2336D2BACC923004AAE4A /* DetailTransformationViewController.swift in Sources */,
 				42B41BB42BA59CCD00BCC732 /* LoginRepository.swift in Sources */,
-				42B41BB22BA5934E00BCC732 /* KeyChainStorage.swift in Sources */,
 				42A233302BAA1165004AAE4A /* HeroesRepositoryProtocol.swift in Sources */,
 				42B41BC12BA5A5D100BCC732 /* HerosViewController.swift in Sources */,
 				42B41B982BA4F37700BCC732 /* NetworkLogin.swift in Sources */,
@@ -599,6 +615,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				428211B62BAF0D5300D8ABD9 /* ViewTest.swift in Sources */,
+				428211AB2BAEEB0500D8ABD9 /* UseCaseTest.swift in Sources */,
 				42B41BA42BA5830900BCC732 /* NetworkLoginTests.swift in Sources */,
 				42A233732BAE0325004AAE4A /* KeyChainTest.swift in Sources */,
 			);
@@ -613,6 +631,18 @@
 			targetProxy = 42B41B5E2BA4B28200BCC732 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		428211C72BAF553000D8ABD9 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				428211C62BAF553000D8ABD9 /* en */,
+				428211C82BAF553100D8ABD9 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		42B41B6F2BA4B28200BCC732 /* Debug */ = {
@@ -861,6 +891,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		428211A52BAECB9D00D8ABD9 /* XCRemoteSwiftPackageReference "KeyChainJB" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Boncroix/KeyChainJB.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.2;
+			};
+		};
 		42A2331E2BA60A3F004AAE4A /* XCRemoteSwiftPackageReference "CombineCocoa" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/CombineCommunity/CombineCocoa.git";
@@ -877,17 +915,14 @@
 				version = 7.11.0;
 			};
 		};
-		42B41BAD2BA5930300BCC732 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
-			requirement = {
-				kind = exactVersion;
-				version = 21.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		428211A62BAECB9D00D8ABD9 /* KeyChainJB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 428211A52BAECB9D00D8ABD9 /* XCRemoteSwiftPackageReference "KeyChainJB" */;
+			productName = KeyChainJB;
+		};
 		42A2331F2BA60A3F004AAE4A /* CombineCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 42A2331E2BA60A3F004AAE4A /* XCRemoteSwiftPackageReference "CombineCocoa" */;
@@ -897,11 +932,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 42A233392BAAB4A4004AAE4A /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
-		};
-		42B41BAE2BA5930300BCC732 /* KeychainSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 42B41BAD2BA5930300BCC732 /* XCRemoteSwiftPackageReference "keychain-swift" */;
-			productName = KeychainSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

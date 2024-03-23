@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  DragonBallPro
+
+  Created by Jose Bueno Cruz on 23/3/24.
+  
+*/
+
+
+"Email"="Correo Electrónico";
+"Password"="Clave";
+"Login"="ENTRAR";
+"errorEmail"="Error en el email";
+"errorPassword"="La contraseña debe tener 4 o más caracteres";
+"search"="Buscar";

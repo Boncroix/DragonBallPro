@@ -31,3 +31,9 @@ final class NetworkLogin: NetworkLoginProtocol {
     }
 }
 
+final class NetworkLoginFake: NetworkLoginProtocol {
+    func loginApp(user: String, password: String) async throws -> String {
+        UUID().uuidString
+    }
+}
+
