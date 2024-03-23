@@ -35,6 +35,7 @@
 		42A2336D2BACC923004AAE4A /* DetailTransformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A2336B2BACC923004AAE4A /* DetailTransformationViewController.swift */; };
 		42A2336E2BACC923004AAE4A /* DetailTransformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42A2336C2BACC923004AAE4A /* DetailTransformationViewController.xib */; };
 		42A233702BACCB0F004AAE4A /* DetailTransformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A2336F2BACCB0F004AAE4A /* DetailTransformationViewModel.swift */; };
+		42A233732BAE0325004AAE4A /* KeyChainTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A233722BAE0325004AAE4A /* KeyChainTest.swift */; };
 		42B41B4B2BA4B27F00BCC732 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B41B4A2BA4B27F00BCC732 /* AppDelegate.swift */; };
 		42B41B4D2BA4B27F00BCC732 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B41B4C2BA4B27F00BCC732 /* SceneDelegate.swift */; };
 		42B41B542BA4B28200BCC732 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42B41B532BA4B28200BCC732 /* Assets.xcassets */; };
@@ -95,6 +96,7 @@
 		42A2336B2BACC923004AAE4A /* DetailTransformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTransformationViewController.swift; sourceTree = "<group>"; };
 		42A2336C2BACC923004AAE4A /* DetailTransformationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTransformationViewController.xib; sourceTree = "<group>"; };
 		42A2336F2BACCB0F004AAE4A /* DetailTransformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTransformationViewModel.swift; sourceTree = "<group>"; };
+		42A233722BAE0325004AAE4A /* KeyChainTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainTest.swift; sourceTree = "<group>"; };
 		42B41B472BA4B27F00BCC732 /* DragonBallPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonBallPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42B41B4A2BA4B27F00BCC732 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42B41B4C2BA4B27F00BCC732 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -176,6 +178,14 @@
 				42A2336C2BACC923004AAE4A /* DetailTransformationViewController.xib */,
 			);
 			path = DetailTransformation;
+			sourceTree = "<group>";
+		};
+		42A233712BAE02D9004AAE4A /* keyChain */ = {
+			isa = PBXGroup;
+			children = (
+				42A233722BAE0325004AAE4A /* KeyChainTest.swift */,
+			);
+			path = keyChain;
 			sourceTree = "<group>";
 		};
 		42B41B3E2BA4B27F00BCC732 = {
@@ -374,6 +384,7 @@
 		42B41BA52BA5835200BCC732 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				42A233712BAE02D9004AAE4A /* keyChain */,
 				42B41BAC2BA5899F00BCC732 /* Network */,
 			);
 			path = Data;
@@ -589,6 +600,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42B41BA42BA5830900BCC732 /* NetworkLoginTests.swift in Sources */,
+				42A233732BAE0325004AAE4A /* KeyChainTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
