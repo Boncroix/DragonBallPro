@@ -23,6 +23,7 @@ final class DetailViewModelTests: XCTestCase {
 
     override func tearDownWithError() throws {
         sut = nil
+        hero = nil
     }
     
     func testGetTransformations() async {

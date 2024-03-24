@@ -20,6 +20,7 @@ final class HeroesUseCaseTest: XCTestCase {
 
     override func tearDownWithError() throws {
         sut = nil
+        heroes = []
     }
     
     func testGetHeroes() async throws {

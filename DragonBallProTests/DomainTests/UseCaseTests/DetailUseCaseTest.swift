@@ -20,6 +20,7 @@ final class DetailUseCaseTest: XCTestCase {
 
     override func tearDownWithError() throws {
         sut = nil
+        transformations = []
     }
 
     func testGetTransformations() async throws {
