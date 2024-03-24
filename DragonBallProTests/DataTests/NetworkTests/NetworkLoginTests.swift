@@ -21,7 +21,7 @@ final class NetworkLoginTests: XCTestCase {
         XCTAssertNotEqual(tokenFake, "")
         
         do {
-            let error = try await obj1.loginApp(user: "jose", password: "12345")
+            _ = try await obj1.loginApp(user: "jose", password: "12345")
         } catch {
             let errorMessage = errorMessage(for: error)
             XCTAssertEqual(errorMessage, "ERROR CODE 401")

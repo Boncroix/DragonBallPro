@@ -10,7 +10,6 @@ import Combine
 
 final class DetailViewModel: ObservableObject {
     
-    @Published var locations = [Location]()
     @Published var transformations = [Transformation]()
     @Published var numberOfTransformations: Int = 0
     
@@ -22,21 +21,7 @@ final class DetailViewModel: ObservableObject {
          detailUseCase: DetailUseCaseProtocol = DetailUseCase()) {
         self.detailUseCase = detailUseCase
         self.hero = hero
-        getLocations()
         getTransformations()
-    }
-    
-    //MARK: GetLocations
-    func getLocations() {
-        Task {
-            do {
-                let locationsData = try await detailUseCase.getLocations(params: ["id": "\(hero.id)"])
-                self.locations = locationsData
-            } catch {
-                let errorMessage = errorMessage(for: error)
-                NSLog(errorMessage)
-            }
-        }
     }
     
     //MARK: GetTransformations

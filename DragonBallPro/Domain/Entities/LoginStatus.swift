@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum LoginStatus {
+enum LoginStatus: Equatable {
     case none
     case success
     case notValidate

@@ -12,7 +12,7 @@ import KeyChainJB
 final class UseCaseTest: XCTestCase {
     
     func testLoginFake() async throws {
-        let kc = SecureDataKeychain()
+        let kc = SecureDataUserDefaults()
         XCTAssertNotNil(kc)
         
         let obj = LoginUseCaseFake()
@@ -33,12 +33,12 @@ final class UseCaseTest: XCTestCase {
     }
     
     func testLogin() async throws {
-        let kc = SecureDataKeychain()
+        let kc = SecureDataUserDefaults()
         XCTAssertNotNil(kc)
         
         kc.set(token: "", key: ConstantsApp.CONST_TOKEN_ID_KEYCHAIN)
         
-        let useCase = LoginUseCase(repo: LoginRepositoryFake())
+        let useCase = LoginUseCase(repo: LoginRepositoryFake(), secureData: kc)
         XCTAssertNotNil(useCase)
         
         let resp = await useCase.validateToken()

@@ -44,7 +44,7 @@ final class AppState {
     }
     
     //MARK: - LoginApp
-    private func loginApp(user: String, password: String) {
+    public func loginApp(user: String, password: String) {
         Task {
             do {
                 if ( try await loginUseCase.loginApp(user: user, password: password)) {

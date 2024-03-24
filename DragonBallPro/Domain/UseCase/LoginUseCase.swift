@@ -55,6 +55,9 @@ final class LoginUseCase: LoginUseCaseProtocol {
 }
 
 
+
+
+//MARK: LoginUseCaseFake
 final class LoginUseCaseFake: LoginUseCaseProtocol {
 
     private let repo: LoginRepositoryProtocol
@@ -62,7 +65,7 @@ final class LoginUseCaseFake: LoginUseCaseProtocol {
     
     //MARK: - Inits
     init(repo: LoginRepositoryProtocol = LoginRepositoryFake(),
-         secureData: SecureDataProtocol = SecureDataKeychain()) {
+         secureData: SecureDataProtocol = SecureDataUserDefaults()) {
         self.repo = repo
         self.secureData = secureData
     }

@@ -19,3 +19,20 @@ final class HeroesRepository: HeroesRepositoryProtocol {
         try await network.getModel(endPoint: HTTPEndPoints.heros, params: params, token: token)
     }
 }
+
+
+
+
+//MARK: - HeroesRepositoryFake
+final class HeroesRepositoryFake: HeroesRepositoryProtocol {
+    
+    private var network: NetworkModelProtocol
+    
+    init(network: NetworkModelProtocol = NetworkHerosFake()) {
+        self.network = network
+    }
+    
+    func getHeroes(params: [String: Any], token: String) async throws -> [Hero] {
+        try await network.getModel(endPoint: HTTPEndPoints.heros, params: params, token: token)
+    }
+}

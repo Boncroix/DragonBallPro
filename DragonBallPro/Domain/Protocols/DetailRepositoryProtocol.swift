@@ -8,6 +8,5 @@
 import Foundation
 
 protocol DetailRepositoryProtocol {
-    func getLocations(params: [String: Any], token: String) async throws -> [Location]
     func getTransformations(params: [String: Any], token: String) async throws -> [Transformation]
 }

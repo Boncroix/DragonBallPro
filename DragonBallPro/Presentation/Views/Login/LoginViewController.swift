@@ -135,7 +135,7 @@ extension LoginViewController {
 
 //MARK: - ConfigUI
 extension LoginViewController {
-    /// Botón para mostrar contraseña
+    
     private func configUI() {
         let showPasswordButton = UIButton(type: .system)
         showPasswordButton.setImage(UIImage(systemName: "eye"), for: .normal)
@@ -156,7 +156,7 @@ extension LoginViewController {
 
 // MARK: - Alert
 extension LoginViewController {
-    /// Crear alert para el networkError
+    
     private func showAlert(message: String) {
         let alertController = UIAlertController(title: "ERROR NETWORK", message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
@@ -166,12 +166,12 @@ extension LoginViewController {
 }
 //MARK: - Objc
 extension LoginViewController {
-    /// Ocultar teclado
+    
     @objc func hidenKeyboard() {
         self.view.endEditing(true)
     }
     
-    /// Cambiar constraint inferior cuando el teclado está fuera
+    // Cambiar constraint inferior cuando el teclado está fuera
     @objc func changedFrameKeyboard(notification: Notification) {
         let userInfo = notification.userInfo
         let frame = userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect
@@ -182,7 +182,7 @@ extension LoginViewController {
             self.view.layoutIfNeeded()
         }
     }
-    /// Mostrar contraseña
+    // Mostrar contraseña
     @objc func didTapShowPasswordButton(sender: UIButton) {
         txtPassword.isSecureTextEntry.toggle()
     }

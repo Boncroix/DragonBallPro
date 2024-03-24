@@ -35,3 +35,29 @@ final class HeroesUseCase: HeroesUseCaseProtocol {
         return try await repo.getHeroes(params: params, token: token)
     }
 }
+
+
+
+
+//MARK: HeroesUseCaseFake
+final class HeroesUseCaseFake: HeroesUseCaseProtocol {
+    
+    var repo: HeroesRepositoryProtocol
+    var secureData: SecureDataProtocol
+    
+    //MARK: - Inits
+    init(repo: HeroesRepositoryProtocol = HeroesRepository(network: NetworkHerosFake()),
+         secureData: SecureDataProtocol = SecureDataUserDefaults()) {
+        self.repo = repo
+        self.secureData = secureData
+        
+    }
+    
+    //MARK: - GetHeroes
+    func getHeroes(params: [String: Any]) async throws -> [Hero] {
+        guard let token = secureData.getToken(key: ConstantsApp.CONST_TOKEN_ID_KEYCHAIN) else {
+            throw NetworkError.tokenFormatError
+        }
+        return try await repo.getHeroes(params: params, token: token)
+    }
+}

@@ -11,7 +11,6 @@ import KeyChainJB
 //MARK: - Protocol
 protocol DetailUseCaseProtocol {
     var repo: DetailRepositoryProtocol {get set}
-    func getLocations(params: [String: Any]) async throws -> [Location]
     func getTransformations(params: [String: Any]) async throws -> [Transformation]
 }
 
@@ -27,12 +26,29 @@ final class DetailUseCase: DetailUseCaseProtocol {
         self.secureData = secureData
     }
     
-    //MARK: - GetLocations
-    func getLocations(params: [String: Any]) async throws -> [Location] {
+    //MARK: - GetTransformations
+    func getTransformations(params: [String: Any]) async throws -> [Transformation] {
         guard let token = secureData.getToken(key: ConstantsApp.CONST_TOKEN_ID_KEYCHAIN) else {
             throw NetworkError.tokenFormatError
         }
-        return try await repo.getLocations(params: params, token: token)
+        return try await repo.getTransformations(params: params, token: token)
+    }
+}
+
+
+
+
+//MARK: - Fake DetailUseCase
+final class DetailUseCaseFake: DetailUseCaseProtocol {
+
+    var repo: DetailRepositoryProtocol
+    var secureData: SecureDataProtocol
+    
+    //MARK: - Inits
+    init(repo: DetailRepositoryProtocol = DetailRepository(network: NetworkTransformationsFake()),
+         secureData: SecureDataProtocol = SecureDataUserDefaults()) {
+        self.repo = repo
+        self.secureData = secureData
     }
     
     //MARK: - GetTransformations
