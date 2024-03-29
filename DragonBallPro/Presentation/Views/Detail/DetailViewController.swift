@@ -21,6 +21,7 @@ final class DetailViewController: UIViewController {
     @IBOutlet weak var txtDescriptionHero: UITextView!
     @IBOutlet weak var viewTransformations: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var lblTransformations: UILabel!
     
     //MARK: - Inits
     init(viewModel: DetailViewModel) {
@@ -38,6 +39,7 @@ final class DetailViewController: UIViewController {
         super.viewDidLoad()
         binding()
         configUI()
+        internationalization()
         
     }
 }
@@ -93,5 +95,11 @@ extension DetailViewController {
         layout.scrollDirection = .horizontal
         layout.itemSize = CGSize(width: 300, height: 180)
         collectionView.collectionViewLayout = layout
+        navigationItem.title = NSLocalizedString("Detail", comment: "text title view controller")
+    }
+    
+    private func internationalization() {
+        lblTransformations.text = NSLocalizedString("Transformations", comment: "text view controller transformations")
+        navigationItem.title = NSLocalizedString("Detail", comment: "text title view controller")
     }
 }

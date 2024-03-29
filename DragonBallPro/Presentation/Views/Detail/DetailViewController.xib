@@ -14,6 +14,7 @@
                 <outlet property="collectionView" destination="B0b-Uv-PWa" id="0bi-Ws-PPQ"/>
                 <outlet property="imageHero" destination="dZi-Nw-k9w" id="DLR-0w-6eY"/>
                 <outlet property="lblNameHero" destination="ahr-ar-RrQ" id="2mI-P0-3rN"/>
+                <outlet property="lblTransformations" destination="rGw-p5-PfL" id="62j-K3-a9F"/>
                 <outlet property="txtDescriptionHero" destination="PNv-Wf-vDW" id="9O9-Hr-M6J"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="5Q1-vQ-nCg"/>
                 <outlet property="viewTransformations" destination="hEa-2A-idg" id="773-QS-5am"/>
@@ -53,7 +54,7 @@
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transformations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGw-p5-PfL">
                                     <rect key="frame" x="0.0" y="0.0" width="169" height="26.333333333333332"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                    <color key="textColor" name="CustomColor2"/>
+                                    <color key="textColor" name="BlackAndWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="B0b-Uv-PWa">
@@ -105,9 +106,6 @@
     <resources>
         <image name="ImageBackground" width="322.66665649414062" height="557.33331298828125"/>
         <namedColor name="BlackAndWhite">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="CustomColor2">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">

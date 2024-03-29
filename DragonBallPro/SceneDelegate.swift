@@ -33,7 +33,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 }
 
                 switch status {
-                case .notValidate, .none:
+                case .notValidate:
                     DispatchQueue.main.async {
                         setRootViewController(LoginViewController(appState: self.appState))
                     }

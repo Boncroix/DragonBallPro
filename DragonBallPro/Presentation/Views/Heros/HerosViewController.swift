@@ -89,6 +89,10 @@ extension HerosViewController: UICollectionViewDelegate, UICollectionViewDataSou
         let nextVC = DetailViewController(viewModel: viewModel)
         navigationController?.pushViewController(nextVC, animated: true)
     }
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        view.endEditing(true)
+    }
 }
 
 //MARK: - ConfigUI
@@ -121,7 +125,10 @@ extension HerosViewController {
     private func internationalization() {
         heroSearch.placeholder = NSLocalizedString("search", comment: "placeholder search")
     }
-    
+}
+
+//MARK: - Objc
+extension HerosViewController {
     @objc func segmentedControlValueChanged(_ sender: UISegmentedControl) {
         let ascending = sender.selectedSegmentIndex == 0 ? true : false
         viewModel.sortHeroesByName(ascending: ascending)
