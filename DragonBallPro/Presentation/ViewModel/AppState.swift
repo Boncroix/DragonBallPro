@@ -72,7 +72,7 @@ final class AppState {
     func closeSessionUser() {
         Task {
             await loginUseCase.logout()
-            self.statusLogin = .none
+            self.statusLogin = .notValidate
         }
     }
 }

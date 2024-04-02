@@ -26,9 +26,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             .sink(receiveValue: { [weak self] status in
                 guard let self = self else { return }
 
-                func setRootViewController(_ viewController: UIViewController) {
-                    let nav = UINavigationController(rootViewController: viewController)
-                    self.window?.rootViewController = nav
+                func setRootViewController(_ nextVC: UIViewController) {
+                    let navigation = UINavigationController(rootViewController: nextVC)
+                    self.window?.rootViewController = navigation
                     self.window?.makeKeyAndVisible()
                 }
 

@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: - Hero
 struct Hero: Decodable {
     let id: UUID
     let name: String?

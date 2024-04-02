@@ -60,6 +60,10 @@ final class LoginViewController: UIViewController {
         super.viewDidDisappear(animated)
         NotificationCenter.default.removeObserver(self)
     }
+    
+    deinit {
+        debugPrint("Login released")
+    }
 }
 
 //MARK: - BindingUI

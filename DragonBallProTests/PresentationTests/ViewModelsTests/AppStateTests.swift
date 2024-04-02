@@ -76,7 +76,7 @@ final class AppStateTests: XCTestCase {
         
         //Then
         _ = await XCTWaiter().fulfillment(of: [expectation], timeout: 1)
-        XCTAssertEqual(sut.statusLogin, .none)
+        XCTAssertEqual(sut.statusLogin, .notValidate)
     }
     
 }

@@ -21,6 +21,11 @@
 		428211DB2BB03F3100D8ABD9 /* DetailUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428211DA2BB03F3100D8ABD9 /* DetailUseCaseTest.swift */; };
 		428211DE2BB040BA00D8ABD9 /* ToolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428211DD2BB040BA00D8ABD9 /* ToolsTests.swift */; };
 		428211E02BB0415400D8ABD9 /* NetworkModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428211DF2BB0415400D8ABD9 /* NetworkModelTests.swift */; };
+		429868EB2BB6EC6D00BEA658 /* LocationsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429868EA2BB6EC6D00BEA658 /* LocationsRepository.swift */; };
+		429868ED2BB6ED7D00BEA658 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429868EC2BB6ED7D00BEA658 /* Location.swift */; };
+		429868F02BB6EEA100BEA658 /* LocationsRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429868EF2BB6EEA100BEA658 /* LocationsRepositoryProtocol.swift */; };
+		429868F22BB6EEEF00BEA658 /* LocationsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429868F12BB6EEEF00BEA658 /* LocationsUseCase.swift */; };
+		429868F42BB6F06D00BEA658 /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429868F32BB6F06D00BEA658 /* LocationsViewModel.swift */; };
 		42A233152BA60353004AAE4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42A233142BA60353004AAE4A /* LaunchScreen.storyboard */; };
 		42A2331C2BA60564004AAE4A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A2331A2BA60564004AAE4A /* LoginViewController.swift */; };
 		42A2331D2BA60564004AAE4A /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42A2331B2BA60564004AAE4A /* LoginViewController.xib */; };
@@ -38,7 +43,7 @@
 		42A2333B2BAAB4A4004AAE4A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 42A2333A2BAAB4A4004AAE4A /* Kingfisher */; };
 		42A233412BAB8491004AAE4A /* DetailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A233402BAB8491004AAE4A /* DetailRepository.swift */; };
 		42A233452BAB85F8004AAE4A /* DetailRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A233442BAB85F8004AAE4A /* DetailRepositoryProtocol.swift */; };
-		42A233472BAB8668004AAE4A /* Transformations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A233462BAB8668004AAE4A /* Transformations.swift */; };
+		42A233472BAB8668004AAE4A /* Transformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A233462BAB8668004AAE4A /* Transformation.swift */; };
 		42A233492BAB86E8004AAE4A /* DetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A233482BAB86E8004AAE4A /* DetailUseCase.swift */; };
 		42A2334B2BAB88E3004AAE4A /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A2334A2BAB88E3004AAE4A /* DetailViewModel.swift */; };
 		42A2334F2BAC0783004AAE4A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A2334D2BAC0783004AAE4A /* DetailViewController.swift */; };
@@ -49,6 +54,10 @@
 		42A2336E2BACC923004AAE4A /* DetailTransformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42A2336C2BACC923004AAE4A /* DetailTransformationViewController.xib */; };
 		42A233702BACCB0F004AAE4A /* DetailTransformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A2336F2BACCB0F004AAE4A /* DetailTransformationViewModel.swift */; };
 		42A233732BAE0325004AAE4A /* KeyChainTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A233722BAE0325004AAE4A /* KeyChainTest.swift */; };
+		42A75A262BB95A0500E07552 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A75A242BB95A0500E07552 /* LocationsViewController.swift */; };
+		42A75A272BB95A0500E07552 /* LocationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42A75A252BB95A0500E07552 /* LocationsViewController.xib */; };
+		42A75A292BB962CD00E07552 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A75A282BB962CD00E07552 /* UIImage+Extensions.swift */; };
+		42A75A2B2BBBD33E00E07552 /* HeroAnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A75A2A2BBBD33E00E07552 /* HeroAnotation.swift */; };
 		42B41B4B2BA4B27F00BCC732 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B41B4A2BA4B27F00BCC732 /* AppDelegate.swift */; };
 		42B41B4D2BA4B27F00BCC732 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B41B4C2BA4B27F00BCC732 /* SceneDelegate.swift */; };
 		42B41B542BA4B28200BCC732 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42B41B532BA4B28200BCC732 /* Assets.xcassets */; };
@@ -68,6 +77,7 @@
 		42B41BB82BA59F5000BCC732 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B41BB72BA59F5000BCC732 /* LoginUseCase.swift */; };
 		42B41BC12BA5A5D100BCC732 /* HerosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B41BBF2BA5A5D100BCC732 /* HerosViewController.swift */; };
 		42B41BC22BA5A5D100BCC732 /* HerosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42B41BC02BA5A5D100BCC732 /* HerosViewController.xib */; };
+		42C0F46A2BBBF39D00AFB659 /* HeroAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C0F4692BBBF39D00AFB659 /* HeroAnnotationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +105,11 @@
 		428211DA2BB03F3100D8ABD9 /* DetailUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUseCaseTest.swift; sourceTree = "<group>"; };
 		428211DD2BB040BA00D8ABD9 /* ToolsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsTests.swift; sourceTree = "<group>"; };
 		428211DF2BB0415400D8ABD9 /* NetworkModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModelTests.swift; sourceTree = "<group>"; };
+		429868EA2BB6EC6D00BEA658 /* LocationsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsRepository.swift; sourceTree = "<group>"; };
+		429868EC2BB6ED7D00BEA658 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		429868EF2BB6EEA100BEA658 /* LocationsRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsRepositoryProtocol.swift; sourceTree = "<group>"; };
+		429868F12BB6EEEF00BEA658 /* LocationsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsUseCase.swift; sourceTree = "<group>"; };
+		429868F32BB6F06D00BEA658 /* LocationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModel.swift; sourceTree = "<group>"; };
 		42A233142BA60353004AAE4A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42A2331A2BA60564004AAE4A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		42A2331B2BA60564004AAE4A /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -110,7 +125,7 @@
 		42A233362BAA3887004AAE4A /* HeroViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroViewCell.xib; sourceTree = "<group>"; };
 		42A233402BAB8491004AAE4A /* DetailRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRepository.swift; sourceTree = "<group>"; };
 		42A233442BAB85F8004AAE4A /* DetailRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRepositoryProtocol.swift; sourceTree = "<group>"; };
-		42A233462BAB8668004AAE4A /* Transformations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transformations.swift; sourceTree = "<group>"; };
+		42A233462BAB8668004AAE4A /* Transformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transformation.swift; sourceTree = "<group>"; };
 		42A233482BAB86E8004AAE4A /* DetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUseCase.swift; sourceTree = "<group>"; };
 		42A2334A2BAB88E3004AAE4A /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		42A2334D2BAC0783004AAE4A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +136,10 @@
 		42A2336C2BACC923004AAE4A /* DetailTransformationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTransformationViewController.xib; sourceTree = "<group>"; };
 		42A2336F2BACCB0F004AAE4A /* DetailTransformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTransformationViewModel.swift; sourceTree = "<group>"; };
 		42A233722BAE0325004AAE4A /* KeyChainTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainTest.swift; sourceTree = "<group>"; };
+		42A75A242BB95A0500E07552 /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
+		42A75A252BB95A0500E07552 /* LocationsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationsViewController.xib; sourceTree = "<group>"; };
+		42A75A282BB962CD00E07552 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		42A75A2A2BBBD33E00E07552 /* HeroAnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroAnotation.swift; sourceTree = "<group>"; };
 		42B41B472BA4B27F00BCC732 /* DragonBallPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonBallPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42B41B4A2BA4B27F00BCC732 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42B41B4C2BA4B27F00BCC732 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +162,7 @@
 		42B41BB72BA59F5000BCC732 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
 		42B41BBF2BA5A5D100BCC732 /* HerosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosViewController.swift; sourceTree = "<group>"; };
 		42B41BC02BA5A5D100BCC732 /* HerosViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HerosViewController.xib; sourceTree = "<group>"; };
+		42C0F4692BBBF39D00AFB659 /* HeroAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroAnnotationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,20 +271,20 @@
 		42A2334C2BAC0765004AAE4A /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				42A233652BACC358004AAE4A /* New Group */,
+				42A233652BACC358004AAE4A /* TransformationCell */,
 				42A2334D2BAC0783004AAE4A /* DetailViewController.swift */,
 				42A233552BAC2894004AAE4A /* DetailViewController.xib */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
 		};
-		42A233652BACC358004AAE4A /* New Group */ = {
+		42A233652BACC358004AAE4A /* TransformationCell */ = {
 			isa = PBXGroup;
 			children = (
 				42A233662BACC385004AAE4A /* TransformationCell.swift */,
 				42A233672BACC385004AAE4A /* TransformationCell.xib */,
 			);
-			path = "New Group";
+			path = TransformationCell;
 			sourceTree = "<group>";
 		};
 		42A2336A2BACC8FD004AAE4A /* DetailTransformation */ = {
@@ -282,6 +302,16 @@
 				42A233722BAE0325004AAE4A /* KeyChainTest.swift */,
 			);
 			path = keyChainTests;
+			sourceTree = "<group>";
+		};
+		42A75A232BB959E700E07552 /* Locations */ = {
+			isa = PBXGroup;
+			children = (
+				42C0F46B2BBC4AFB00AFB659 /* LocationsAnotation */,
+				42A75A242BB95A0500E07552 /* LocationsViewController.swift */,
+				42A75A252BB95A0500E07552 /* LocationsViewController.xib */,
+			);
+			path = Locations;
 			sourceTree = "<group>";
 		};
 		42B41B3E2BA4B27F00BCC732 = {
@@ -364,6 +394,7 @@
 				42A2332B2BAA107C004AAE4A /* HeroesViewModel.swift */,
 				42A2334A2BAB88E3004AAE4A /* DetailViewModel.swift */,
 				42A2336F2BACCB0F004AAE4A /* DetailTransformationViewModel.swift */,
+				429868F32BB6F06D00BEA658 /* LocationsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -371,6 +402,7 @@
 		42B41B7E2BA4B83000BCC732 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				42A75A232BB959E700E07552 /* Locations */,
 				42A2336A2BACC8FD004AAE4A /* DetailTransformation */,
 				42A2334C2BAC0765004AAE4A /* Detail */,
 				42B41BBE2BA5A5BF00BCC732 /* Heros */,
@@ -403,6 +435,7 @@
 				42B41BB32BA59CCD00BCC732 /* LoginRepository.swift */,
 				42A2332D2BAA1121004AAE4A /* HeroesRepository.swift */,
 				42A233402BAB8491004AAE4A /* DetailRepository.swift */,
+				429868EA2BB6EC6D00BEA658 /* LocationsRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -426,6 +459,7 @@
 				42B41BB52BA59D9C00BCC732 /* LoginRepositoryProtocols.swift */,
 				42A2332F2BAA1165004AAE4A /* HeroesRepositoryProtocol.swift */,
 				42A233442BAB85F8004AAE4A /* DetailRepositoryProtocol.swift */,
+				429868EF2BB6EEA100BEA658 /* LocationsRepositoryProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -444,6 +478,7 @@
 				42B41BB72BA59F5000BCC732 /* LoginUseCase.swift */,
 				42A233312BAA12F1004AAE4A /* HeroesUseCase.swift */,
 				42A233482BAB86E8004AAE4A /* DetailUseCase.swift */,
+				429868F12BB6EEEF00BEA658 /* LocationsUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -452,6 +487,7 @@
 			isa = PBXGroup;
 			children = (
 				42A233212BA8126B004AAE4A /* URLResponse+Extension.swift */,
+				42A75A282BB962CD00E07552 /* UIImage+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -461,7 +497,8 @@
 			children = (
 				42A233232BA968DB004AAE4A /* LoginStatus.swift */,
 				42A233272BAA0543004AAE4A /* Hero.swift */,
-				42A233462BAB8668004AAE4A /* Transformations.swift */,
+				42A233462BAB8668004AAE4A /* Transformation.swift */,
+				429868EC2BB6ED7D00BEA658 /* Location.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -511,6 +548,15 @@
 				42B41BC02BA5A5D100BCC732 /* HerosViewController.xib */,
 			);
 			path = Heros;
+			sourceTree = "<group>";
+		};
+		42C0F46B2BBC4AFB00AFB659 /* LocationsAnotation */ = {
+			isa = PBXGroup;
+			children = (
+				42A75A2A2BBBD33E00E07552 /* HeroAnotation.swift */,
+				42C0F4692BBBF39D00AFB659 /* HeroAnnotationView.swift */,
+			);
+			path = LocationsAnotation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -610,6 +656,7 @@
 				42A233562BAC2894004AAE4A /* DetailViewController.xib in Resources */,
 				42B41BC22BA5A5D100BCC732 /* HerosViewController.xib in Resources */,
 				428211C52BAF553000D8ABD9 /* Localizable.strings in Resources */,
+				42A75A272BB95A0500E07552 /* LocationsViewController.xib in Resources */,
 				42B41B542BA4B28200BCC732 /* Assets.xcassets in Resources */,
 				42A233152BA60353004AAE4A /* LaunchScreen.storyboard in Resources */,
 				42A233692BACC385004AAE4A /* TransformationCell.xib in Resources */,
@@ -634,26 +681,35 @@
 				42A2331C2BA60564004AAE4A /* LoginViewController.swift in Sources */,
 				42A2334F2BAC0783004AAE4A /* DetailViewController.swift in Sources */,
 				42A233242BA968DB004AAE4A /* LoginStatus.swift in Sources */,
+				42C0F46A2BBBF39D00AFB659 /* HeroAnnotationView.swift in Sources */,
+				42A75A292BB962CD00E07552 /* UIImage+Extensions.swift in Sources */,
 				42B41B8D2BA4DF7B00BCC732 /* HTTPMethods.swift in Sources */,
+				429868EB2BB6EC6D00BEA658 /* LocationsRepository.swift in Sources */,
 				42A233222BA8126B004AAE4A /* URLResponse+Extension.swift in Sources */,
+				429868F02BB6EEA100BEA658 /* LocationsRepositoryProtocol.swift in Sources */,
+				429868F22BB6EEEF00BEA658 /* LocationsUseCase.swift in Sources */,
 				42B41BB62BA59D9C00BCC732 /* LoginRepositoryProtocols.swift in Sources */,
 				42B41B892BA4DD9600BCC732 /* AppState.swift in Sources */,
 				42B41B4B2BA4B27F00BCC732 /* AppDelegate.swift in Sources */,
-				42A233472BAB8668004AAE4A /* Transformations.swift in Sources */,
+				42A233472BAB8668004AAE4A /* Transformation.swift in Sources */,
 				42A233322BAA12F1004AAE4A /* HeroesUseCase.swift in Sources */,
 				42A233492BAB86E8004AAE4A /* DetailUseCase.swift in Sources */,
 				42A2332E2BAA1121004AAE4A /* HeroesRepository.swift in Sources */,
 				42A2336D2BACC923004AAE4A /* DetailTransformationViewController.swift in Sources */,
 				42B41BB42BA59CCD00BCC732 /* LoginRepository.swift in Sources */,
+				429868ED2BB6ED7D00BEA658 /* Location.swift in Sources */,
 				42A233302BAA1165004AAE4A /* HeroesRepositoryProtocol.swift in Sources */,
+				429868F42BB6F06D00BEA658 /* LocationsViewModel.swift in Sources */,
 				42B41BC12BA5A5D100BCC732 /* HerosViewController.swift in Sources */,
 				42B41B982BA4F37700BCC732 /* NetworkLogin.swift in Sources */,
 				42A233282BAA0543004AAE4A /* Hero.swift in Sources */,
 				42A233452BAB85F8004AAE4A /* DetailRepositoryProtocol.swift in Sources */,
 				42B41B9A2BA4F46000BCC732 /* NetworkRequest.swift in Sources */,
 				42A233412BAB8491004AAE4A /* DetailRepository.swift in Sources */,
+				42A75A2B2BBBD33E00E07552 /* HeroAnotation.swift in Sources */,
 				42B41BA02BA5770D00BCC732 /* ConstantsApp.swift in Sources */,
 				42A2332A2BAA0783004AAE4A /* NetworkModel.swift in Sources */,
+				42A75A262BB95A0500E07552 /* LocationsViewController.swift in Sources */,
 				42A2332C2BAA107C004AAE4A /* HeroesViewModel.swift in Sources */,
 				42B41B952BA4E5C500BCC732 /* HTTPAuthentication.swift in Sources */,
 				42A233702BACCB0F004AAE4A /* DetailTransformationViewModel.swift in Sources */,
@@ -842,6 +898,7 @@
 				DEVELOPMENT_TEAM = L6V6H2LAL2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DragonBallPro/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Necesito saber tu ubicación para mostrar en detalles de heroe";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -869,6 +926,7 @@
 				DEVELOPMENT_TEAM = L6V6H2LAL2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DragonBallPro/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Necesito saber tu ubicación para mostrar en detalles de heroe";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

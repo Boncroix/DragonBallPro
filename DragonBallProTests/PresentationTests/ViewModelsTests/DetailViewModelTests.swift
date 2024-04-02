@@ -36,16 +36,4 @@ final class DetailViewModelTests: XCTestCase {
         XCTAssertEqual(sut.transformations.count, 2)
         XCTAssertEqual(sut.transformations.first?.name, "1. Oozaru – Gran Mono")
     }
-    
-    func testchekTransformations() async {
-        //When
-        let expectation = XCTestExpectation(description: "Chek Transformations")
-        XCTAssertNoThrow(sut.getTransformations())
-        let isEmpty = sut.checkTransformations()
-        
-        //Then
-        _ = await XCTWaiter().fulfillment(of: [expectation], timeout: 3)
-        XCTAssertEqual(isEmpty , false)
-    }
-
 }

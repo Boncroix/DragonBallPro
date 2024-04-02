@@ -34,13 +34,15 @@ final class DetailViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    deinit {
+        debugPrint("Detail released")
+    }
+    
     //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         binding()
         configUI()
-        internationalization()
-        
     }
 }
 
@@ -50,10 +52,15 @@ extension DetailViewController {
         self.viewModel.$transformations
             .receive(on: DispatchQueue.main)
             .sink { [weak self] transformations in
-                guard let self = self else { return }
-                self.transformations = transformations
-                self.viewTransformations.isHidden = self.viewModel.checkTransformations()
-                self.collectionView.reloadData()
+                self?.transformations = transformations
+                self?.collectionView.reloadData()
+            }
+            .store(in: &suscriptors)
+        
+        self.viewModel.$transformationsisEmpty
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] in
+                self?.viewTransformations.isHidden = $0
             }
             .store(in: &suscriptors)
     }
@@ -85,21 +92,49 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
 extension DetailViewController {
     
     private func configUI() {
-        /// Registro y configuración de celda
+        registerCell()
+        layoutCollectionView()
+        configButtonLocations()
+        internationalization()
+    }
+    // Registro de celda
+    private func registerCell() {
         collectionView.register(UINib(nibName: TransformationCell.reuseIdentifier, bundle: nil), forCellWithReuseIdentifier: TransformationCell.reuseIdentifier)
         lblNameHero.text = viewModel.hero.name
         guard let imageURL = URL(string: viewModel.hero.photo ?? "") else {return}
         imageHero.kf.setImage(with: imageURL, options:  [.transition(.fade(0.2))])
         txtDescriptionHero.text = viewModel.hero.description
+    }
+    // Layout del collectionVIew
+    private func layoutCollectionView() {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         layout.itemSize = CGSize(width: 300, height: 180)
         collectionView.collectionViewLayout = layout
-        navigationItem.title = NSLocalizedString("Detail", comment: "text title view controller")
     }
-    
+    // Configuración botón de navegación hasta las localizaciones
+    private func configButtonLocations() {
+        let imageButton = UIImage(named: "GPS")
+        let newSize = CGSize(width: 60, height: 50)
+        let resizedImage = imageButton?.resized(to: newSize)
+        let locationsButton = UIButton(type: .custom)
+        locationsButton.setImage(resizedImage, for: .normal)
+        locationsButton.addTarget(self, action: #selector(navigateToLocations), for: .touchUpInside)
+        let locationsBarBuoonItem = UIBarButtonItem(customView: locationsButton)
+        navigationItem.rightBarButtonItem = locationsBarBuoonItem
+    }
+    // Internacionalización de los textos
     private func internationalization() {
         lblTransformations.text = NSLocalizedString("Transformations", comment: "text view controller transformations")
         navigationItem.title = NSLocalizedString("Detail", comment: "text title view controller")
+    }
+}
+
+//MARK: Objc
+extension DetailViewController {
+    @objc func navigateToLocations() {
+        let viewModel = LocationsViewModel(hero: viewModel.hero)
+        let nextVC = LocationsViewController(viewModel: viewModel)
+        navigationController?.pushViewController(nextVC, animated: true)
     }
 }

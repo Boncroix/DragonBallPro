@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: - LoginStatus
 enum LoginStatus: Equatable {
     case none
     case success
